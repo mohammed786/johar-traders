@@ -1,0 +1,109 @@
+.header-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0rem 3rem;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fafafafa;
+  z-index: 1000000;
+  //   display: none;
+  &--sticky {
+    box-shadow: 0 0 7px #00000050;
+    position: fixed;
+  }
+  &__logo {
+    font-size: 2rem;
+  }
+  &__nav {
+    position: relative;
+    font-size: 1.6rem;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    @include change(smallScreen) {
+      padding: 2rem;
+      width: 100%;
+      flex-direction: column;
+      position: absolute;
+      top: 7.5rem;
+      left: 0;
+      background-color: #f3f3f3;
+      z-index: 0;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all 0.25s ease-in;
+    }
+    &--active {
+      @include change(smallScreen) {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  &__nav-link {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    & a,
+    & a:link,
+    & a:active {
+      text-decoration: none;
+      color: #333333;
+    }
+    &--contact {
+      display: inline-block;
+      color: #f6f6f6;
+      background-color: #252525;
+      border-radius: 10rem;
+      & a,
+      & a:link,
+      & a:active {
+        display: block;
+        color: currentColor;
+      }
+    }
+  }
+  &__menu-btn {
+    position: absolute;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 100005;
+    right: 2rem;
+    display: none;
+    @include change(smallScreen) {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+    }
+    &--line-1,
+    &--line-2,
+    &--line-3 {
+      border-radius: 100px;
+      border: none;
+      width: 3rem;
+      height: 0.4rem;
+      background-color: black;
+      transform-origin: center;
+      transition: transform 0.2s;
+    }
+
+    &--line-1-after {
+      transform: translateY(0.9rem) rotate(135deg);
+    }
+    &--line-2-after {
+      opacity: 0;
+    }
+    &--line-3-after {
+      transform: translateY(-0.9rem) rotate(-135deg);
+    }
+  }
+}

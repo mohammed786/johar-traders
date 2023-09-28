@@ -1,0 +1,68 @@
+.testimonials {
+  padding: 10rem 6rem;
+  display: flex;
+  overflow: hidden;
+  @include change(smallScreen) {
+    flex-direction: column;
+  }
+  @include change(tabScreen) {
+    padding: 6rem 3rem;
+  }
+
+  &__header {
+    padding: 4rem;
+    flex: 1;
+    color: #f6f6f6;
+  }
+  &__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  &__sub-heading {
+    font-size: 4rem;
+    font-weight: 200;
+  }
+  &__wrapper {
+    flex: 3;
+    display: flex;
+    gap: 5rem;
+    @include change(mobileScreen) {
+      flex-direction: column;
+    }
+  }
+}
+
+.testimonial {
+  box-shadow: 0 0 15px #00000073;
+  color: #fafafa;
+  padding: 6rem;
+  background-color: #7f7a72b8;
+  backdrop-filter: blur(15px);
+  border-radius: 2rem;
+
+  &__user {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  &__user-image {
+    max-width: 4rem;
+    border-radius: 10rem;
+  }
+  &__user-details {
+    flex: 1;
+  }
+  &__user-name {
+    display: block;
+    font-size: 1.4rem;
+  }
+  &__user-position {
+    display: block;
+    font-size: 1.2rem;
+  }
+  &__message {
+    font-size: 1.6rem;
+    color: #f2f2f2;
+    font-weight: light;
+  }
+}

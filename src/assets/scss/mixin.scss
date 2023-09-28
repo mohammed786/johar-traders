@@ -1,0 +1,19 @@
+@mixin change($breakpoint) {
+  @if $breakpoint == smallScreen {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tabScreen {
+    @media only screen and (max-width: 43.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobileScreen {
+    @media only screen and (max-width: 34.37em) {
+      @content;
+    }
+  }
+}

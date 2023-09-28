@@ -1,0 +1,121 @@
+.contact-us {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  border-radius: 2rem;
+  box-shadow: 0 0 15px #00000050;
+  @include change(mobileScreen) {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  &__left {
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #0000007d;
+    backdrop-filter: blur(25px);
+  }
+  &__left-content {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+    @include change(mobileScreen) {
+      padding: 3rem;
+      align-items: flex-start;
+    }
+  }
+  &__heading {
+    font-size: 3rem;
+    line-height: 1.15;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  &__info {
+    font-size: 1.6rem;
+    list-style: none;
+  }
+  &__link {
+    margin-bottom: 0.5rem;
+    & span {
+      display: block;
+      font-size: 1.2rem;
+    }
+    & a {
+      text-decoration: none;
+      color: currentColor;
+    }
+  }
+  &__socialmedia {
+    align-self: flex-start;
+    &-icons {
+      padding: 1rem 0;
+      display: flex;
+      gap: 1rem;
+      & a img {
+        max-width: 2.4rem;
+        filter: invert(100%);
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex: 2;
+    background-color: #ffffffb8;
+    backdrop-filter: blur(20px);
+  }
+  &__form-wrapper {
+    padding: 4rem;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4%;
+  &__item {
+    & label {
+      padding-left: 1rem;
+      font-size: 1.2rem;
+      display: block;
+    }
+    & input,
+    & textarea {
+      font: inherit;
+      font-size: 1.4rem;
+      display: block;
+      width: 100%;
+      border: none;
+      padding: 1rem;
+      border-radius: 1.25rem;
+      resize: none;
+      background-color: #ffffff50;
+    }
+  }
+  &__submit-btn {
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 2rem;
+    background-color: #00000050;
+    color: #ffffff;
+  }
+}
+.flex--2 {
+  flex: 0 0 100%;
+  margin-bottom: 1.25rem;
+}
+.flex--1 {
+  flex: 0 0 48%;
+  margin-bottom: 1.25rem;
+}

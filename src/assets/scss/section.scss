@@ -1,0 +1,101 @@
+.section-width__regular {
+  max-width: 120rem;
+  padding: 10rem 6rem;
+  margin: auto;
+  @include change(mobileScreen) {
+    padding: 10rem 3rem;
+  }
+}
+.section__slider {
+  position: relative;
+}
+.section__products {
+  background-image: url(https://img.freepik.com/free-vector/3d-perspective-style-diamond-shape-white-background_1017-27556.jpg?size=626&ext=jpg);
+  background-image: linear-gradient(
+      to bottom,
+      #fffffffa 0%,
+      #ffffff20 50%,
+      #ffffff00
+    ),
+    url(../img/greek-vase.png);
+  // background-size: cover;
+  background-repeat: repeat;
+}
+.section__testimonials {
+  background-image: linear-gradient(to right, #000000ef, #00000030),
+    url(https://images.pexels.com/photos/8292816/pexels-photo-8292816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position-x: left;
+  background-position-y: bottom;
+  background-size: cover;
+}
+.section__our-clients {
+  background-color: #eaeaea;
+}
+
+.section__contact-us {
+  // background-image: url(https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80);
+  background-image: url(https://images.unsplash.com/photo-1556621266-45150d1e9f4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80);
+  background-size: cover;
+  background-position: 0% 20%;
+  display: flex;
+  align-items: center;
+  height: 85vh;
+  padding: 75px 0;
+  @include change(mobileScreen) {
+    padding: 75px 2rem;
+    height: auto;
+  }
+}
+.section__contact-us-page {
+  background-image: url(https://images.unsplash.com/photo-1542338892102-090b89a99916?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1285&q=80);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 75px);
+  padding: 75px 0;
+  @include change(mobileScreen) {
+    padding: 75px 2rem;
+    height: auto;
+  }
+}
+.section-header {
+  &__heading {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 3rem;
+    line-height: 1.25;
+    &--dark {
+      color: #f6f6f6;
+    }
+  }
+  &__sub-heading {
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    &--dark {
+      color: #f6f6f6;
+    }
+  }
+}
+
+.section__our-work {
+  & ::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  /* Track */
+  & ::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  /* Handle */
+  & ::-webkit-scrollbar-thumb {
+    background: rgb(95, 95, 95);
+    border-radius: 10rem;
+  }
+
+  /* Handle on hover */
+  & ::-webkit-scrollbar-thumb:hover {
+    background: rgb(78, 78, 78);
+  }
+}
